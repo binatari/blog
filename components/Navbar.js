@@ -35,7 +35,7 @@ const Navbar = ({categories, articles}) => {
                     <Dropdown category={category}/>
                 )
               })}
-              <Link href={`/About`}>
+              <Link href={`/about`}>
                       <a className="font-semibold py-2 px-4">
                         About
                       </a>
@@ -119,7 +119,7 @@ const Navbar = ({categories, articles}) => {
                     </Link>
                 )
               })}
-               <Link href={`/About`}>
+               <Link href={`/about`}>
                       <a className="hover:text-blue-700 text-black block px-3 py-2 rounded-md text-base font-medium text-center">
                         About
                       </a>

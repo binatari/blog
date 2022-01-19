@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react"
 import Link from 'next/Link'
-import NextImage from "./image"
+import NextImage from "./Image"
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react"
