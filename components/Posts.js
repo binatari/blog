@@ -1,7 +1,7 @@
 import React from "react"
 import Card from "./Card"
 
-const Articles = ({ articles }) => {
+const Posts = ({ articles }) => {
  
   return (
     <div>
@@ -14,6 +14,6 @@ const Articles = ({ articles }) => {
   )
 }
 
-export default Articles
+export default Posts
 
 

@@ -1,5 +1,5 @@
 import React from "react"
-import Articles from "../components/articles"
+import Posts from "../components/Posts"
 import Carousel from "../components/Carousel"
 import Layouts from "../components/Layouts"
 import Seo from "../components/Seo"
@@ -8,6 +8,7 @@ import Pagination from "@material-ui/lab/Pagination"
 import { useState } from "react"
 import { useQuery } from "react-query"
 import { fetchAPI, getStrapiURL } from "../lib/api"
+
 
 const Home = ({ articles, categories, homepage, pagination, pageCount }) => {
   const url = getStrapiURL('/api/articles')
@@ -46,7 +47,7 @@ const Home = ({ articles, categories, homepage, pagination, pageCount }) => {
         </div>
       </div>
       {
-        data && <Articles articles={data.data}/>
+        data && <Posts articles={data.data}/>
       }
       <Pagination
         count={pageCount.pagination.pageCount}

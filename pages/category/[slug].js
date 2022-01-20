@@ -1,4 +1,4 @@
-import Articles from "../../components/articles"
+import Posts from "../../components/Posts"
 import { fetchAPI } from "../../lib/api"
 import Layouts from "../../components/Layouts"
 import Seo from "../../components/Seo"
@@ -17,7 +17,7 @@ console.log(category)
       <div className="container mx-auto">
         <div className="min-h-screen px-6">
           <h1 className="text-4xl font-bold mt-20 mb-10">{category.attributes.name}</h1>
-          <Articles articles={category.attributes.articles.data} />
+          <Posts articles={category.attributes.articles.data} />
         </div>
       </div>
   </Layouts>
