@@ -21,7 +21,7 @@ const Dropdown = ({category}) => {
         <ul class="absolute hidden text-black bg-white pt-1 group-hover:block z-50">
           {
           category.attributes.subcategories.data.map((sub, i)=>
-            (<li class={i == 0 && 'border-t-2 border-purple-500'}>
+            (<li class={i == 0 && 'border-t-2 border-purple-500'} key={i}>
             <a
               class=" py-2 px-4 block whitespace-no-wrap text-black"
               href="#"

@@ -1,5 +1,4 @@
 import Footer from "./Footer"
-import Nav from "./nav"
 import Navbar from "./Navbar"
 
 const Layout = ({ children, categories, seo, articles }) => (

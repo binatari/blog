@@ -13,14 +13,11 @@ const Home = ({ articles, categories, homepage, pagination, pageCount }) => {
   const url = getStrapiURL('/api/articles')
   
   const [page, setPage] = useState(1);
-  console.log(page)
   const { isLoading, isError, isSuccess, data, refetch, isFetching } = useQuery(["post", page], getPosts, {
     placeholderData:pagination,
     keepPreviousData:true,
     enabled: !!page,
   });
-
-  console.log(categories)
 
   async function getPosts() {
     const request = await axios.get(`${url}?populate=%2A&pagination[page]=${page}&pagination[pageSize]=2`)

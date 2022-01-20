@@ -1,13 +1,12 @@
-import Image from "../components/image.js"
-import Layout from "../components/layout"
+import Image from "../components/Image"
+import Layout from "../components/Layout"
 import { useState } from "react"
 import { fetchAPI } from "../lib/api"
-const About = ({bio, articles, categories}) => {
+const about = ({bio, articles, categories}) => {
   const [text, setText] = useState(false)
   const shorten = (str) =>{
     return str.length >200 ? str.slice(0, 200) + "..." : str
    }
-  console.log(bio)
     return (
       <Layout categories={categories} articles={articles}>
         <main className="container mx-auto min-h-screen flex items-center py-20">
@@ -60,4 +59,4 @@ export async function getStaticProps({ params }) {
       revalidate: 1,
     }
   }
-export default About
+export default about

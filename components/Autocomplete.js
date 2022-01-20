@@ -3,7 +3,7 @@ import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 const Autocomplete = (articles) => {
     const {articles:datas} = articles
 
-      const searchList = datas.map((data, i)=>{
+      const searchList = datas?.map((data, i)=>{
           return {
               id:i,
               content:data.attributes.content,
@@ -11,9 +11,6 @@ const Autocomplete = (articles) => {
               description:data.attributes.description
           }
       })
-
-      console.log(searchList)
-
     return (
         <>
            <ReactSearchAutocomplete

@@ -7,7 +7,6 @@ import Autocomplete from "./Autocomplete";
 
 const Navbar = ({categories, articles}) => {
     const [isOpen, setIsOpen] = useState(false);
-    console.log(articles)
     return (
         <div>
             <nav className="bg-white">
@@ -30,9 +29,9 @@ const Navbar = ({categories, articles}) => {
                       Home
                       </a>
                     </Link>
-                {categories.map((category) => {
+                {categories.map((category, i) => {
                 return (
-                    <Dropdown category={category}/>
+                    <Dropdown category={category} key={i}/>
                 )
               })}
               <Link href={`/about`}>
