@@ -1,8 +1,8 @@
 import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
 import { fetchAPI } from "../../lib/api"
-import Layouts from "../../components/layouts"
-import Images from "../../components/images"
+import Layouts from "../../components/Layouts"
+import Images from "../../components/Images"
 import Seo from "../../components/seo"
 import { getStrapiMedia } from "../../lib/media"
 

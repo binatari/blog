@@ -1,5 +1,5 @@
 import React from "react"
-import Articles from "../components/Articles"
+import Articles from "../components/articles"
 import Carousel from "../components/Carousel"
 import Layouts from "../components/Layouts"
 import Seo from "../components/Seo"
