@@ -1,7 +1,7 @@
 import React from "react"
 import Articles from "../components/Articles"
 import Carousel from "../components/Carousel"
-import Layout from "../components/Layout"
+import Layouts from "../components/Layouts"
 import Seo from "../components/Seo"
 import axios from "axios"
 import Pagination from "@material-ui/lab/Pagination"
@@ -29,7 +29,7 @@ const Home = ({ articles, categories, homepage, pagination, pageCount }) => {
   }
 
   return (
-    <Layout categories={categories} articles={articles}>
+    <Layouts categories={categories} articles={articles}>
       <Seo seo={homepage.attributes.seo} />
       <div className="container mx-auto pt-6">
       <div className="h-screen">
@@ -57,7 +57,7 @@ const Home = ({ articles, categories, homepage, pagination, pageCount }) => {
         onChange={handlePaginationChange}
       />
       </div>
-    </Layout>
+    </Layouts>
   )
 }
 

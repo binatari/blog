@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Link from 'next/link'
-import Image from "./Image"
+import Images from "./Images"
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -33,7 +33,7 @@ export default function Carousel({ articles }) {
         {articles.map((article, i) => {
           return (
             <SwiperSlide>
-              <Image image={article.attributes.image} />
+              <Images image={article.attributes.image} />
             </SwiperSlide>
           )
         })}

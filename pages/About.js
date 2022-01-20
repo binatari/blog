@@ -1,5 +1,5 @@
-import Image from "../components/Image"
-import Layout from "../components/Layout"
+import Images from "../components/Images"
+import Layouts from "../components/Layouts"
 import { useState } from "react"
 import { fetchAPI } from "../lib/api"
 const about = ({bio, articles, categories}) => {
@@ -8,12 +8,12 @@ const about = ({bio, articles, categories}) => {
     return str.length >200 ? str.slice(0, 200) + "..." : str
    }
     return (
-      <Layout categories={categories} articles={articles}>
+      <Layouts categories={categories} articles={articles}>
         <main className="container mx-auto min-h-screen flex items-center py-20">
           <div className="flex flex-wrap items-center justify-around h-full">
             <div className=" border border-gray-500 flex flex-col items-center w-4/5 md:w-1/2 px-16 py-10 space-y-6 mb-10 rounded">
               <div className=" relative h-64 w-64 rounded-full overflow-hidden ">
-            <Image image={bio.data.attributes.image} />
+            <Images image={bio.data.attributes.image} />
             </div>
             <h1 className="text-3xl font-semibold">ABOUT ME</h1>
             <p>{!text? shorten(bio.data.attributes.Description) : bio.data.attributes.Description}</p>
@@ -40,7 +40,7 @@ const about = ({bio, articles, categories}) => {
             </div>
             </div>
         </main>
-        </Layout>
+        </Layouts>
     )
 }
 

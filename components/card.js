@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "next/link"
-import Image from "./Image"
+import Images from "./Images"
 
 const Card = ({ article, index }) => {
   const shorten = (str) =>{
@@ -10,7 +10,7 @@ const Card = ({ article, index }) => {
   <div className="flex items-center justify-center py-10 mx-auto w-full md:w-4/5 px-4 md:px-0">
   <div className='flex flex-wrap justify-between w-full' >
     <div className={`w-full md:w-1/2 py-32 relative ${index % 2 !== 1 && 'md:order-2'}`}>
-       <Image image={article.attributes.image} />
+       <Images image={article.attributes.image} />
     </div> 
     <div className='w-full md:w-2/5 py-6 md:py-16 '>
       <span className='py-4 font-semibold text-xl'>{article.attributes.title}</span>

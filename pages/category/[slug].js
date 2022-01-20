@@ -1,6 +1,6 @@
 import Articles from "../../components/Articles"
 import { fetchAPI } from "../../lib/api"
-import Layout from "../../components/Layout"
+import Layouts from "../../components/Layouts"
 import Seo from "../../components/Seo"
 
 const Category = ({ category, categories }) => {
@@ -12,7 +12,7 @@ console.log(categories)
 console.log(category)
   return (
     
-    <Layout categories={categories.data}>
+    <Layouts categories={categories.data}>
       <Seo seo={seo} />
       <div className="container mx-auto">
         <div className="min-h-screen px-6">
@@ -20,7 +20,7 @@ console.log(category)
           <Articles articles={category.attributes.articles.data} />
         </div>
       </div>
-  </Layout>
+  </Layouts>
   )
 }
 

@@ -1,8 +1,8 @@
 import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
 import { fetchAPI } from "../../lib/api"
-import Layout from "../../components/layout"
-import NextImage from "../../components/image"
+import Layouts from "../../components/layouts"
+import Images from "../../components/images"
 import Seo from "../../components/seo"
 import { getStrapiMedia } from "../../lib/media"
 
@@ -17,7 +17,7 @@ const Article = ({ article, categories, allArticles }) => {
   }
 
   return (
-    <Layout categories={categories.data} articles={allArticles}>
+    <Layouts categories={categories.data} articles={allArticles}>
       <Seo seo={seo} />
       <div className="container mx-auto">
         <ul className="flex mx-auto w-[90%] px-4 md:w-4/5 justify-between items-center pt-4 border-t border-black my-10">
@@ -41,7 +41,7 @@ const Article = ({ article, categories, allArticles }) => {
 
       </div>
       </div>
-    </Layout>
+    </Layouts>
   )
 }
 
